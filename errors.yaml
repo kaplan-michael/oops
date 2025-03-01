@@ -1,0 +1,22 @@
+errors:
+  - code: 400
+    title: "Bad Request"
+    message: "Whoa there! Your request is so messy, even our server can’t figure out what you mean. Please check your URL and try again."
+  - code: 403
+    title: "Forbidden"
+    message: "Halt! You shall not pass... at least, not without proper credentials. This page is off-limits."
+  - code: 404
+    title: "Not Found"
+    message: "Oops! The page you’re looking for ran off to join the circus. We couldn’t find it anywhere."
+  - code: 500
+    title: "Internal Server Error"
+    message: "Yikes! Something went haywire in our server’s brain. Our tech wizards are on it—please try again later."
+  - code: 502
+    title: "Bad Gateway"
+    message: "Our server got a really weird reply from its upstream buddy. Give it a moment to sort things out and try again."
+  - code: 503
+    title: "Service Unavailable"
+    message: "Looks like our service took a coffee break. We’re either busy or under maintenance. Please check back in a few minutes."
+  - code: 504
+    title: "Gateway Timeout"
+    message: "Our server was left hanging waiting for a response from upstream. Time’s up! Please try your request again later."

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{{ .Code }} - {{ .Title }}</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(
+                    135deg,
+                    #fff176,
+                    #ffd54f
+                ); /* moderate yellow gradient */
+                font-family: Arial, sans-serif;
+                color: #212121; /* dark text for high contrast */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            .container {
+                text-align: center;
+            }
+            h1 {
+                font-size: 100px;
+                margin: 0;
+                color: #212121; /* Darker text for contrast */
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            }
+            p {
+                font-size: 24px;
+                margin-top: 20px;
+                color: #424242; /* Darker text for contrast */
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>{{ .Code }}</h1>
+            <p>{{ .Message }}</p>
+        </div>
+    </body>
+</html>
