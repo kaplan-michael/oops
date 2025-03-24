@@ -2,11 +2,12 @@ package server
 
 import (
 	"context"
+	"net/http"
+	"time"
+
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/kaplan-michael/oops/errorpage"
 	"go.uber.org/zap"
-	"net/http"
-	"time"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/kaplan-michael/oops/internal/config"
@@ -31,6 +32,11 @@ func Run(ctx context.Context, conf *config.Config) error {
 	// Handle error pages. Since the ingress forwards errors with headers,
 	// we use a catch-all endpoint here.
 	r.Get("/*", errorHandler(ep))
+	r.Put("/*", errorHandler(ep))
+	r.Post("/*", errorHandler(ep))
+	r.Delete("/*", errorHandler(ep))
+	r.Patch("/*", errorHandler(ep))
+	r.Options("/*", errorHandler(ep))
 
 	srv := &http.Server{
 		Addr:    ":" + conf.Port,
