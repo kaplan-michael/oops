@@ -14,5 +14,6 @@ ifneq ($(findstring dirty,$(VERSION)),)
 	buildah push $(IMAGE):$(VERSION)
 else
 	buildah bud -t $(IMAGE):$(VERSION) -t $(IMAGE):latest .
-	buildah push $(IMAGE):$(VERSION) $(IMAGE):latest
+	buildah push $(IMAGE):$(VERSION)
+	buildah push $(IMAGE):latest
 endif
