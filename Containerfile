@@ -1,4 +1,4 @@
-FROM docker.io/library/golang:1.24-alpine AS builder
+FROM docker.io/library/golang:1.25-alpine AS builder
 
 #Copy the source code
 WORKDIR /app
